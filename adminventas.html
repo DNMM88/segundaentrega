@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aministracion</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="/CSS/administracion.css">
+ 
+    <link rel="stylesheet" href="/CSS/administracionventas.css">
+</head>
+<body>
+    
+
+
+
+    
+<header class="main-header">
+     
+    <input class="input-check" type="checkbox" id="check-menu">
+
+    <label class="burger-menu" for="check-menu">
+
+        <span class="burger-line"></span>
+
+    </label>
+
+    <div class="logoprincipal" href="">
+        <img class="nav-logo"
+            src="/imagenes/logopagina.png">
+    </div>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" href="/administracion.html">ADMINISTRACION</a>
+            </li>
+            <li class="nav-item">
+                <a class="cerrarsesion1" href="/index.html">CERRAR SESION</a>
+
+            </li>
+            </ul>
+   
+       
+    </nav>
+
+   
+
+    <div class="logoprincipal2" href="">
+        <img class="nav-logo"
+            src="/imagenes/logopagina.png">
+    </div>
+
+</header>
+
+
+    <h1 class="title">ADMINISTRACION VENTAS</h1>
+
+
+   <main id="form">
+   
+    <div class="filtro-seccion">
+        <label for="filtro-destino">Filtrar por Destino:</label>
+        <input type="text" id="filtro-destino">
+      </div>
+    
+      <div class="agregar-seccion">
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino">
+        <input type="file" class="imagencargada" id="cargar-imagen">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" maxlength="100"></textarea>
+        <label for="precio">Precio USD:</label>
+        <input type="number" id="precio">
+        <label for="fecha-salida">Fecha de Salida:</label>
+        <input type="date" id="fecha-salida">
+        <button onclick="agregarInformacion()">Agregar</button>
+      </div>
+    
+      <table id="tabla-ventas">
+        <thead>
+          <tr>
+            <th>DESTINO</th>
+            <th>FOTO</th>
+            <th>DESCRIPCIÓN</th>
+            <th>PRECIO USD</th>
+            <th>FECHA DE SALIDA</th>
+            <th>ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-ventas">
+         
+        </tbody>
+      </table>
+    </main>
+    <footer>
+        <div class="column">
+           <div class="logof"> 
+                <img  src="/imagenes/logopagina.png" alt="Logo del sitio">
+            
+        </div>
+        </div>
+      <div class="linea"></div>
+        <div class="column">
+            <div class="social">
+                <a href="#"><img src="/imagenes/facebook-667456_1280.png" alt="Facebook"></a>
+                <a href="#"><img src="/imagenes/whatsapp-873316_1280.png" alt="Twitter"></a>
+                <a href="#"><img src="/imagenes/instagram-1675670_1280.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="linea"></div>
+        <div class="column">
+            <div class="info">
+                <p>Información de contacto:</p>
+                <p>Dirección: Punta del Este - Uruguay</p>
+                <p>Email: Viajes@informacion.com.uy</p>
+                <p>Teléfono: +5983478977</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javascript/admin.js"></script>  
+    <script src="/javascript/sesioncerrada.js"></script>  
+    <script src="/javascript/adminventas.js"></script> 
+</body>
+    </html>

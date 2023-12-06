@@ -1,0 +1,141 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+  }
+.form{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+  label{
+  color: salmon;
+  font-size: 25px;
+  background: rgba(0,0,0,.4);
+  }
+  main {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el formulario */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"]
+   {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  textarea{
+    width: 500px;
+    height: 50px;
+  }
+  
+  button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align:center
+  
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  .cuerpo-tabla-ventas{ color: salmon;
+  font-size: 20px;
+  background: rgba(0,0,0,.4);}
+  tbody{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background: rgba(0,0,0,.4); 
+    color: salmon;
+    font-size: 20px;
+
+}
+img{height: 100px;
+width: 100px;}
+.lista-ventas {
+    display: flex; 
+    flex-wrap: wrap;
+    text-align: center;
+     margin: 10px;
+  }
+  span{
+    color: white;
+    margin: 5px;
+  }
+  .item-venta{ margin: 10px;
+    border: salmon solid 3px;
+    background-color: rgba(0,0,0,.4);
+  }
+ 
+
+@media (max-width: 768px) {
+    #tabla-ventas {
+        overflow-x: auto;
+        display: block;
+    }
+
+    #tabla-ventas thead {
+        display: none;
+    }
+
+    #tabla-ventas tbody, #tabla-ventas tr, #tabla-ventas td {
+        display: block;
+        width: 100%;
+    }
+
+    #tabla-ventas tr {
+        margin-bottom: 15px;
+    }
+
+    #tabla-ventas td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    #tabla-ventas td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+.lista-ventas {
+    color: salmon;
+    font-size: 20px;
+    }

@@ -1,0 +1,59 @@
+
+
+.logoprincipal2{margin-left: auto;
+margin-top: 5px;}
+
+.containeradmin {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 200px;
+    margin-bottom: 400px;
+  }
+  .opcionadmin{
+    color: salmon;
+    margin-left: 500px;
+    margin-top: 50px;
+  }
+ 
+  .botonadmin {
+    display: inline-block;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 16px;
+    color: salmon;
+    text-decoration: none;
+    background-color: rgba(0,0,0,.4);
+    border: 3px solid salmon;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 35px;
+   
+  }
+
+  .botonadmin:hover {
+    background-color: black;
+    color: salmon;
+    border: 3px solid salmon;
+  }
+
+
+
+  .deleteBtn   {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .editBtn  {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }

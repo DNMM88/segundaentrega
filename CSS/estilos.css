@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap');
+
+html{ height: 100%;}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --primary-color: #1e90ff;
+   margin:0;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/imagenes/costa.jpg);
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+    background-color: #f0f0f0;
+    min-height: 100%;
+
+   
+  }
+
+  .main-header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 1;
+    border-bottom: salmon 2px solid;
+    width: 100%;
+
+}
+
+
+.input-check {
+    display: none;
+}
+
+
+.burger-menu {
+    width: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+
+}
+
+
+.burger-line::before,
+.burger-line::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color:salmon;
+    position: absolute;
+    transform: translateY(-10px);
+    transition: .3s ease-in-out;
+}
+
+.input-check:checked~.burger-menu .burger-line {
+    background-color: transparent;
+}
+
+
+.input-check:checked~.burger-menu .burger-line::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.input-check:checked~.burger-menu .burger-line::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+
+.burger-line::after {
+    transform: translateY(10px);
+}
+
+
+.main-nav {
+    position: fixed;
+    left: 0;
+    top: 54px;
+    bottom: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: transparent;
+    transition: width .3s ease-in-out;
+    background-color: salmon;
+    border-radius: 10px;
+   
+    
+}
+
+
+.input-check:checked~.main-nav {
+    width: 240px;
+}
+
+.logoprincipal {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.nav-list {
+    gap: .5rem;
+    margin: 5rem 0;
+    padding-right: 1rem;
+}
+
+.nav-item .nav-link {
+    padding: .25rem 1rem;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+
+}
+.cerrarsesion1{
+    padding: .25rem 1rem;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.nav-item .nav-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.cerrarsesion1:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.nav-item:not(:last-child) {
+    border-bottom: 1px solid #DDD
+}
+
+
+@media screen and (width > 768px) {
+    .main-header {
+        justify-content: flex-start;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .main-nav {
+        position: relative;
+        top: 0;
+        width: auto !important;
+        background-color: transparent;
+    }
+
+    .nav-list {
+        margin: auto;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .nav-item:not(:last-child) {
+        border-bottom: none;
+    }
+
+    .nav-list {
+        height: 100%;
+    }
+
+    .nav-item .nav-link {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    .cerrarsesion1 {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .user-menu {
+        margin-left: auto;
+    }
+
+
+    .nav-list {
+        display: flex
+    }
+
+   
+ }
+
+
+
+
+
+.buscador {
+    display: flex;
+    align-items: center;
+ 
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid salmon;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+}
+
+.botonbuscar {
+    background-color: #3498db;
+    border: salmon solid 2px;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 70PX;
+    height: 40px;
+    text-align: center;
+}
+
+@media (max-width: 768px) { 
+    .buscador {
+        display: flex;
+        align-items: stretch;
+    margin-top: 13px;
+margin-right: 60px;   
+}  }
+
+   
+
+
+ .carritoicono {
+    position: fixed;
+    right: 10px;
+    margin-top: 13px;
+   }
+   .carrito{
+    cursor: pointer;
+    height:40px;
+    width: 40px;
+  
+   }
+@media (max-width: 768px) {
+   .carritoicono .carrito {
+      height: 40px;
+      width: 40px;
+    }
+}
+
+
+
+
+
+
+/* ---------------------------------------------- */
+/* -------------BANNER SECCION ------------------ */
+/* ---------------------------------------------- */
+
+.banner {
+   
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.title {
+    color: white;
+    font-size: 2rem;
+    
+    margin-top: 20vh;
+    background: rgba(0,0,0,.4);
+}
+
+
+.linea0 {
+    position: relative;
+    width: 20px; /* Longitud mínima */
+    height: 3px;
+    background-color:  salmon;
+    animation: alargar-achicar 2s ease-in-out infinite;
+    align-items: center;
+}
+
+@keyframes alargar-achicar {
+    0%, 100% {
+        width: 20px; /* Longitud mínima */
+    }
+    25% {
+        width: 500px; /* Longitud máxima */
+    }
+    50% {
+        width: 20px; /* Longitud mínima */
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+        margin-top: 10vh;
+    }
+}
+
+
+/* ---------------------------------------------- */
+/* -------------END BANNER SECCION --------------- */
+/* ---------------------------------------------- */
+.promo{
+
+    color: salmon;
+    margin-top: 100px;
+text-align: center;
+width: 100%;
+}
+
+/* ---------------------------------------------- */
+/* ---------------CARD SECCION ------------------ *
+/* ---------------------------------------------- */
+
+
+
+
+.card-container {
+    perspective: 1000px;
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+
+}
+
+.card-container2 {
+    perspective: 1000px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .card-container3 {
+    perspective: 1000px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .card-container4 {
+    perspective: 1000px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .card1 {
+   margin-right: 30px;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .70s;
+    display: flex;
+    border: solid 4px salmon;
+    border-radius: 10px;
+    
+    
+}
+
+.descripcion1{
+    margin-bottom: 200px;
+    padding: 10PX;
+    text-size-adjust: auto;
+}
+
+.card1:hover {
+    transform: rotateY(180deg);
+}
+
+/* Frente de la tarjeta */
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.front {
+    background-color: #fff;
+    transform: rotateY(0deg);
+}
+
+.front img {
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front h2 {
+   width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+  position: absolute;
+  text-align: center;
+}
+
+/* Parte de atrás de la tarjeta */
+.back {
+    background-color: black;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.back-description {
+    margin: 10px 0;
+    color: salmon;
+}
+.descripcion1{
+    margin-top: 20px;
+    color: #DDD;
+    position: absolute;
+}
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.linkcard{
+color: salmon;
+font-size: 14px;
+margin-bottom: 4px;
+
+}
+
+
+
+@media screen and (max-width: 768px)
+{
+    .descripcion1{
+        text-align: center;
+        font-size: 11px;
+        justify-content: center;
+    }
+    .back-description{
+        text-align: center;
+        font-size: 12px;
+    }
+    h2{
+        font-size: 15px;
+    }
+}
+
+
+/* ---------------------------------------------- */
+/* ---------------CARD SECCION END---------------- *
+/* ---------------------------------------------- */
+
+
+.feature{
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.descripcionfeature{
+    color: salmon;
+    text-align: center;
+    size: 50px;
+    background: rgba(0,0,0,.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color:black; 
+    color: #fff; 
+    height: 150px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+.column p {
+    margin-top: 0px;
+    font-size: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        height: 400px;
+     
+    }
+
+    .column {
+        margin-bottom: 1px;
+    }
+}
+
+
+
+.social{
+    margin-top: 30px;
+}
+
+.social img{
+
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+
+
+.linea{
+    width: 1px;
+    height: 100px;
+    background-color: salmon;
+    border-radius: 80%;
+    margin-top: 20px;
+}
+
+.logof img{
+    width: 120px;
+    height: 120px;
+    margin-top: 15px;
+}
+
+.info{
+    margin-top: 30px;
+}
+
+
+
+

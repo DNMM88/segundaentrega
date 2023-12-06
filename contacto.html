@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="/CSS/contacto.css">
+</head>
+
+<body>
+
+      
+    <header class="main-header">
+     
+        <input class="input-check" type="checkbox" id="check-menu">
+
+        <label class="burger-menu" for="check-menu">
+
+            <span class="burger-line"></span>
+
+        </label>
+
+        <div class="logoprincipal" href="">
+            <img class="nav-logo"
+                src="/imagenes/logopagina.png">
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacto.html">CONTACTO</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registro.html">REGISTRO</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login.html">LOGIN</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/acercade.html">ACERCA DE</a>
+
+                </li>
+            </ul>
+        </nav>
+
+        <div class="buscador">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="botonbuscar">BUSCAR</button>
+        </div>
+
+        <div class="carritoicono">
+            <img class="carrito" src="/imagenes/shopping-cart-150504_1280.png" alt="comprar" />
+        </div>
+    
+    
+    </header>
+
+
+   
+    <main>
+       
+       
+        <div class="banner">
+            <h1 class="title">CONTACTO</h1>
+          
+       
+        </div>
+       
+      <div class="contenidodelformulario">
+            <div class="mapa-y-formulario">
+             
+            
+                <div class="formulario">
+                    <h2>Formulario de Contacto</h2>
+                    <form action="procesar_formulario.php" method="post">
+                        <div class="campo">
+                            <label for="nombre">Nombre completo:<span>*</span></label>
+                            <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="80" >
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email:<span>*</span></label>
+                            <input type="email" id="email" name="email" required minlength="15" maxlength="100">
+                        </div>
+                        <div class="campo">
+                            <label for="mensaje">Mensaje de contacto:<span>*</span></label>
+                            <textarea id="mensaje" name="mensaje" required maxlength="1000"></textarea>
+                        </div>
+                        <div class="boton">
+                            <button class="form" type="submit">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.489426581482!2d-54.94281942443517!3d-34.94433987556667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95750547105dcfa9%3A0x1b1c8a6f220af3fd!2sIsla%20de%20Gorriti%2C%2020000%20Punta%20del%20Este%2C%20Departamento%20de%20Maldonado!5e0!3m2!1ses-419!2suy!4v1694041140461!5m2!1ses-419!2suy"referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+           
+            </div>
+        </div>
+    </main>
+
+
+   
+    
+     <footer>
+        <div class="column">
+           <div class="logof"> 
+                <img  src="/imagenes/logopagina.png" alt="Logo del sitio">
+            
+        </div>
+        </div>
+      <div class="linea"></div>
+        <div class="column">
+            <div class="social">
+                <a href="#"><img src="/imagenes/facebook-667456_1280.png" alt="Facebook"></a>
+                <a href="#"><img src="/imagenes/whatsapp-873316_1280.png" alt="Twitter"></a>
+                <a href="#"><img src="/imagenes/instagram-1675670_1280.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="linea"></div>
+        <div class="column">
+            <div class="info">
+                <p>Información de contacto:</p>
+                <p>Dirección: Punta del Este - Uruguay</p>
+                <p>Email: Viajes@informacion.com.uy</p>
+                <p>Teléfono: +5983478977</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
